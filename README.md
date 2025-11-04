@@ -23,21 +23,22 @@ Vous devez développer un système simplifié de gestion bancaire permettant de 
 
 Votre travail sera évalué sur:
 
-1. **Qualité du code** (30%) - Lisibilité, organisation, conventions
-2. **Fonctionnalités** (25%) - Toutes les features fonctionnent correctement
-3. **Résolution de bugs** (20%) - Debugging et corrections
+1. **Qualité du code** (25%) - Lisibilité, organisation, conventions
+2. **Fonctionnalités** (20%) - Toutes les features fonctionnent correctement
+3. **Résolution de bugs** (15%) - Debugging et corrections
 4. **Documentation technique** (15%) - README et commentaires en anglais
-5. **Tests** (10%) - Au moins tests basiques
+5. **Utilisation de Git** (15%) - Commits, branches, messages, workflow
+6. **Tests** (10%) - Au moins tests basiques
 
 ---
 
 ## Structure du Projet
 
 ```
-test-recrutement-dev/
+Dokal_test_gest/
 ├── README.md                    (Ce fichier)
 ├── INSTRUCTIONS.md              (Instructions détaillées)
-├── EVALUATION.md                (Critères d'évaluation - NE PAS MODIFIER)
+├── TEMPS_PASSE.txt              (À remplir avec votre temps de travail)
 ├── backend/                     (Code backend à compléter)
 │   ├── package.json
 │   ├── server.js               (Serveur à corriger - contient des bugs)
@@ -66,18 +67,27 @@ test-recrutement-dev/
 - Node.js >= 16.x
 - npm ou yarn
 - Un navigateur moderne
+- Git
 
 ### Installation
 
 ```bash
-# Cloner ou extraire le projet
-cd test-recrutement-dev
+# 1. Forker le repository GitHub
+# Allez sur: https://github.com/Dokal-Marketplace/Dokal_test_gest
+# Cliquez sur le bouton "Fork" en haut à droite
 
-# Installer les dépendances backend
+# 2. Cloner VOTRE fork (remplacez VOTRE-USERNAME par votre nom d'utilisateur GitHub)
+git clone https://github.com/VOTRE-USERNAME/Dokal_test_gest.git
+cd Dokal_test_gest
+
+# 3. Créer une branche de travail
+git checkout -b dev/votre-nom
+
+# 4. Installer les dépendances backend
 cd backend
 npm install
 
-# Installer les dépendances frontend (dans un nouveau terminal)
+# 5. Installer les dépendances frontend (dans un nouveau terminal)
 cd ../frontend
 npm install
 ```
@@ -134,22 +144,37 @@ Consultez le fichier `INSTRUCTIONS.md` pour la liste complète des tâches.
 
 ### Ce que vous devez soumettre:
 
-1. **Code complet** dans un dossier ZIP ou lien Git
+1. **Code complet** sur votre fork GitHub
 2. **Tous les fichiers de documentation** complétés
 3. **Un fichier `TEMPS_PASSE.txt`** indiquant:
    - Temps total passé sur le test
    - Temps par partie (debugging, backend, frontend, documentation)
    - Difficultés rencontrées
 
-### Format de soumission:
+### Processus de soumission:
 
+```bash
+# 1. Commiter régulièrement votre travail avec des messages clairs
+git add .
+git commit -m "feat: description de votre modification"
+
+# 2. Pousser votre branche sur votre fork
+git push origin dev/votre-nom
+
+# 3. Créer une Pull Request vers le repository original
+# Allez sur GitHub et cliquez sur "New Pull Request"
+# Titre: "[CANDIDATURE] Prénom Nom - Test Technique"
+# Description: Résumé de votre travail et points importants
+
+# 4. Envoyer le lien de votre Pull Request par email
 ```
-nom-prenom-test-dokal.zip
-├── backend/
-├── frontend/
-├── docs/
-└── TEMPS_PASSE.txt
-```
+
+### Bonnes pratiques Git attendues:
+
+- Commits atomiques et bien nommés (utiliser conventional commits: feat, fix, docs, refactor, test)
+- Messages de commit clairs et en anglais
+- Historique propre (éviter les commits "WIP" ou "fix typo")
+- Branche de travail séparée de main
 
 ---
 
